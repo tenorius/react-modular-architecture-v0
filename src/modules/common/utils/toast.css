@@ -1,0 +1,7 @@
+.toast-background {
+  text-align: center;
+  font-weight: 600;
+}
+.toast-background .success-background {
+  background: #32CD32;
+}

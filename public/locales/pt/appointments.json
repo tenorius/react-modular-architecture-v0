@@ -1,0 +1,52 @@
+{
+  "appointments": "appointments OK",
+  "foo": "appointments[pt] foo",
+
+  "appointment-not-avaible": "Apontamento não disponível",
+  "appointment-status": {
+    "empty": "Vazio",
+    "edit": "Editando",
+    "saved": "Salvo"
+  },
+
+  "toast-messages": {
+    "sah_exceeded": "SAH Excedido!",
+    "empty_appointment": "Apontamento vazio!",
+    "appointment_updated": "Apontamento atualizado com sucesso.",
+    "appointment_update_error": "Erro: Apontamento não atualizado.",
+    "appointment_copied": "Apontamento copiado.",
+    "comment_saved": "Comentário salvo.",
+    "comment_not_changed": "Comentário não alterado.",
+    "appointment_auto_saved": "Apontamento salvo automaticamente.",
+    "feedback_saved": "Feedback salvo."
+  },
+
+  "feedbacks": {
+    "title_admin": "Feedbacks",
+    "title_user": "Formulário de Feedbacks",
+    "message_history": "Histórico de mensagens",
+    "info": "Olá {{user}}, voce pode usar o formulario abaixo para comunicar  qualquer tipo de problema que esteja enfrentando, ou fornecer um feedback bugs ou melhorias do Forecast Executivo.",
+    "open": "Abertos",
+    "closed": "Fechados",
+    "you": "Você",
+    "see_replies": "Ver respostas",
+    "hide_replies": "Ocultar respostas",
+    "to_reply": "Responder",
+    "reply": "Resposta",
+    "reply_sent": "Resposta enviada."
+  },
+
+  "report": {
+    "title": "Relatório de apontamentos",
+    "view": "Visualizar",
+    "download": "Baixar",
+    "year": "Ano",
+    "month": "Mês",
+    "fortnight": "Quinzena",
+    "country": "País",
+    "metrocity": "Localidade",
+    "chip_executives": "Executivos cadastrados",
+    "chip_empty_appointments": "Lançamentos pendentes",
+    "chip_saved_appointments": "Lançamentos realizados"
+  }
+}

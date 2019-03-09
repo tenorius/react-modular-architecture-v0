@@ -1,0 +1,16 @@
+{
+  "-- Permissions --": "",
+  "permissions_title": "Permissions",
+  "permissions": "Permissions",
+  "search_by_pid": "Search by PID",
+  "permission_not_found": "No permission was found. You can create a new one.",
+
+  "-- SAH --": "",
+  "sah_title": "SAH",
+  "go_to_appointments": "Go to appointments",
+  "new_sah_warning": "A SAH with the above parameters was not found. You can create a new one.",
+  "toast-messages": {
+    "permission_saved": "Permission saved!",
+    "pid_required": "PID is required"
+  }
+}

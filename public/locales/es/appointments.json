@@ -1,0 +1,52 @@
+{
+  "appointments": "appointments OK",
+  "foo": "appointments[es] foo",
+
+  "appointment-not-avaible": "Apunte de horas no disponible",
+  "appointment-status": {
+    "empty": "Vacío",
+    "edit": "Edición",
+    "saved": "Guardado"
+  },
+
+  "toast-messages": {
+    "sah_exceeded": "SAH Excedido!",
+    "empty_appointment": "Apunte vazio!",
+    "appointment_updated": "Apunte atualizado com sucesso.",
+    "appointment_update_error": "Erro: apunte no actualizado.",
+    "appointment_copied": "Apunte copiado.",
+    "comment_saved": "Observación registrado.",
+    "comment_not_changed": "Observación no actualizado.",
+    "appointment_auto_saved": "Observación registrado automáticamente.",
+    "feedback_saved": "Feedback registrado."
+  },
+
+  "feedbacks": {
+    "title_admin": "Feedbacks",
+    "title_user": "Formulario de Feedbacks",
+    "message_history": "Historial de mensajes",
+    "info": "¡Hola {{user}}, puede utilizar el siguiente formulario para notificar cualquier tipo de problema que esté enfrentando, o proporcionar un feedback bugs o mejoras del Forecast Ejecutivo.",
+    "open": "Abierto",
+    "closed": "Cerrado",
+    "you": "Usted",
+    "see_replies": "Ver respuestas",
+    "hide_replies": "Ocultar respuestas",
+    "to_reply": "Respuesta",
+    "reply": "Respuesta",
+    "reply_sent": "respuesta enviado."
+  },
+
+  "report": {
+    "title": "Informe de apuntes",
+    "view": "Visualizar",
+    "download": "Descargar",
+    "year": "Año",
+    "month": "Mes",
+    "fortnight": "Quincena",
+    "country": "País",
+    "metrocity": "Lugar",
+    "chip_executives": "Executivos cadastrados",
+    "chip_empty_appointments": "Apuntes pendentes",
+    "chip_saved_appointments": "Apuntes guardados"
+  }
+}
