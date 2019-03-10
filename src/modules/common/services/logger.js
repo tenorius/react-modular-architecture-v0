@@ -1,6 +1,6 @@
 import debug from 'debug';
 
-const BASE = 'tenorio-react-app';
+const BASE = 'react-app';
 const COLOURS = {
   trace: 'lightblue',
   info: 'blue',
@@ -8,7 +8,7 @@ const COLOURS = {
   error: 'red',
 }; // choose better colours :)
 
-class Log {
+class Logger {
   generateMessage(level, message, source) {
     // Set the prefix which will cause debug to enable the message
     this.namespace = `${BASE}:${level}`;
@@ -17,7 +17,11 @@ class Log {
     // Set the colour of the message based on the level
     this.createDebug.color = COLOURS[level];
 
-    if (source) { this.createDebug(source, message); } else { this.createDebug(message); }
+    if (source) {
+      this.createDebug(source, message);
+    } else {
+      this.createDebug(message);
+    }
   }
 
   trace(message, source) {
@@ -37,4 +41,4 @@ class Log {
   }
 }
 
-export default new Log();
+export default new Logger();

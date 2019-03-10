@@ -23,5 +23,4 @@ export class ReducerRegistry {
   }
 }
 
-const reducerRegistry = new ReducerRegistry();
-export default reducerRegistry;
+export default new ReducerRegistry();

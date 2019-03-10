@@ -1,25 +1,7 @@
-/* INDEX FILE
-This file, from a module perspective, behaves as the duck file form the original proposal.
-It exports as default the reducer function of the duck.
-It exports as named export the selectors and the operations.
-Optionally it exports the actions and types if they are needed in other ducks.
-*/
-import reducerRegistry from '../services/reducerRegistry';
+/**
+ * Redux 'Re-Ducks' Architecture
+ * A modular approach to structure Redux
+ * https://medium.freecodecamp.org/scaling-your-redux-app-with-ducks-6115955638be
+ */
 
-import * as reducers from './reducers';
-
-import * as duckSelectors from './selectors';
-import * as duckOperations from './operations';
-import * as duckActions from './actions';
-import * as duckType from './types';
-
-reducerRegistry.register();
-
-export {
-  duckSelectors,
-  duckOperations,
-  duckActions,
-  duckType,
-};
-
-export default reducers;
+export { default as count } from './count';

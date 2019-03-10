@@ -1,17 +1,23 @@
-import 'react-app-polyfill/ie11';
-import './assets/js/polyfill';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 import Provider from 'react-redux/es/components/Provider';
 import WebFont from 'webfontloader';
-import customHistory from './modules/common/services/history';
-import App from './modules/common/index';
+
 import * as serviceWorker from './serviceWorker';
+import App from './modules/common/index';
 import store from './store';
 
+// i18n
+import './i18n';
 
+// Polyfills
+import 'react-app-polyfill/ie11';
+import './assets/js/polyfill';
+
+// eslint-disable-next-line no-console
 console.log('process env:', process.env.NODE_ENV);
 
 if (process.env.NODE_ENV !== 'production') {
@@ -20,7 +26,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 WebFont.load({
   google: {
-    families: ['Material Icons'],
+    families: ['Roboto:300,400,500', 'Material Icons'],
   },
 });
 
@@ -41,11 +47,11 @@ const theme = createMuiTheme({
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={customHistory}>
+    <BrowserRouter>
       <MuiThemeProvider theme={theme}>
         <App />
       </MuiThemeProvider>
-    </Router>
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root'),
 );

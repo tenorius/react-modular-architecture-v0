@@ -7,10 +7,6 @@ const languages = {
     name: 'Português',
     value: 'pt',
   },
-  SPANISH: {
-    name: 'Español',
-    value: 'es',
-  },
 };
 
 export default languages;

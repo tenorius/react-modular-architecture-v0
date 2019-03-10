@@ -1,18 +1,19 @@
-import { connect } from 'react-redux';
+import React, { Fragment } from 'react';
+import { compose } from 'redux';
 import { withNamespaces } from 'react-i18next';
 import { withRouter } from 'react-router-dom';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Routes from './routes';
 
-import './i18n/i18n';
-import './index.css';
-import { duckOperations as commonOperations } from './ducks';
-import App from './views/app';
-
-function mapStateToProps(state) {
-  return {
-    app: state.app,
-  };
-}
-const actions = { ...commonOperations };
+const App = () => (
+  <Fragment>
+    <CssBaseline />
+    <Routes />
+  </Fragment>
+);
 
 // todo: review location conflict with redux
-export default withRouter(connect(mapStateToProps, actions)(withNamespaces(['common'])(App)));
+export default compose(
+  withRouter,
+  withNamespaces(['common']),
+)(App);

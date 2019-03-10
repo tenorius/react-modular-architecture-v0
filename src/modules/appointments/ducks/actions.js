@@ -9,7 +9,7 @@ import { normalize } from 'normalizr';
 import * as types from './types';
 import * as schema from './schemas';
 import modelize from '../../common/services/modelize';
-import logger from '../../common/services/logger';
+import logger from '../../common/utils/logger';
 import { getFortnightId } from '../../common/utils/helper';
 
 const fetchAppointmentsByYear = () => ({
