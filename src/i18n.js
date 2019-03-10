@@ -1,3 +1,10 @@
+/**
+ * i18n Setup File
+ *
+ * - i18next (https://www.i18next.com/)
+ * - React i18next (https://react.i18next.com/)
+ */
+
 import i18n from 'i18next';
 import moment from 'moment';
 import { reactI18nextModule } from 'react-i18next';

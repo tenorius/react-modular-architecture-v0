@@ -1,6 +1,8 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
+import { withI18n } from 'react-i18next';
+
 import { duckOperations as countOperations } from '../ducks/count';
 
 class Home extends React.Component {
@@ -10,10 +12,10 @@ class Home extends React.Component {
   }
 
   render() {
-    const { count } = this.props;
+    const { count, t } = this.props;
     return (
       <div>
-        <h1>Hello World!</h1>
+        <h1>{t('init')}</h1>
         <span>{`Counter: ${count}`}</span>
         <button type="button" onClick={() => this.handleClick('+')}>+</button>
         <button type="button" onClick={() => this.handleClick('-')}>-</button>
@@ -30,4 +32,7 @@ const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(countOperations, dispatch),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  withI18n(),
+)(Home);
