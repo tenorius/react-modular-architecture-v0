@@ -1,13 +1,13 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
 import Provider from 'react-redux/es/components/Provider';
 import WebFont from 'webfontloader';
 
 import * as serviceWorker from './serviceWorker';
-import App from './modules/common/index';
+import App from './modules/common';
 import store from './store';
 
 // i18n
@@ -47,11 +47,11 @@ const theme = createMuiTheme({
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <Router>
       <MuiThemeProvider theme={theme}>
         <App />
       </MuiThemeProvider>
-    </BrowserRouter>
+    </Router>
   </Provider>,
   document.getElementById('root'),
 );

@@ -1,14 +1,13 @@
 import React, { Fragment } from 'react';
 import { withNamespaces } from 'react-i18next';
-import CssBaseline from '@material-ui/core/CssBaseline';
 
 import Routes from './Routes';
 
 const App = () => (
   <Fragment>
-    <CssBaseline />
+    <h1>Users</h1>
     <Routes />
   </Fragment>
 );
 
-export default withNamespaces(['common'])(App);
+export default withNamespaces(['users'])(App);
