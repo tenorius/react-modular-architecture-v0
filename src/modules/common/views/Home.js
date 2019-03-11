@@ -3,7 +3,7 @@ import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
 import { withI18n } from 'react-i18next';
 
-import { duckOperations as countOperations } from '../ducks/count';
+import { operations as countOperations } from '../ducks/count';
 
 class Home extends React.Component {
   handleClick = (operation) => {

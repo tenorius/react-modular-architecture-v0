@@ -7,25 +7,23 @@
  *   - Add reducers to the store on the go.
  */
 
-import reducerRegistry from '../../services/reducerRegistry';
+import reducerRegistry from '../../../common/services/reducerRegistry';
 
 // Export reducers as default
 import * as reducers from './reducers';
 
 // Other entities as named exports
-import * as selectors from './selectors';
 import * as operations from './operations';
 import * as actions from './actions';
-import * as type from './types';
+import * as types from './types';
 
 // Add the new reducers to the store
 reducerRegistry.register();
 
 export {
-  selectors,
   operations,
   actions,
-  type,
+  types,
 };
 
 export default reducers;

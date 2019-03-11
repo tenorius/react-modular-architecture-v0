@@ -5,7 +5,6 @@ import Routes from './Routes';
 
 const App = () => (
   <Fragment>
-    <h1>Users</h1>
     <Routes />
   </Fragment>
 );
