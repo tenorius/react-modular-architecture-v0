@@ -1,11 +1,15 @@
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import {
+  createStore,
+  applyMiddleware,
+  compose,
+  combineReducers,
+} from 'redux';
 import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import freeze from 'redux-freeze';
 import promise from 'redux-promise-middleware';
 import reducerRegistry from './modules/common/services/reducerRegistry';
-import './modules/common/ducks/index';
 
 // for redux devTools debugging extension
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

@@ -1,21 +1,23 @@
 {
-  "name": "acn-forecastexecv2-web",
+  "name": "react-modular-boilerplate",
   "version": "0.1.0",
-  "author": "rodrigo.o.tenorio",
+  "author": "Rodrigo Tenório <email> (https://github.com/tenorius)",
   "contributors": [
     {
-      "name": "alyson.maia.queiroz"
+      "name": "Alyson Maia <alyson.maia@gmail.com> (https://github.com/FederalCircle)"
     }
   ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "private": true,
   "dependencies": {
-    "@apicase/adapter-fetch": "^0.15.1",
-    "@apicase/core": "^0.17.2",
-    "@apicase/services": "^0.8.2",
     "@material-ui/core": "^3.6.1",
     "@material-ui/icons": "^3.0.1",
     "@material-ui/lab": "^3.0.0-alpha.26",
-    "adal-angular": "^1.0.17",
     "axios": "^0.18.0",
     "babel-eslint": "9.0.0",
     "core-js": "^2.6.4",
@@ -32,13 +34,13 @@
     "path-to-regexp": "^2.1.0",
     "query-string": "^6.2.0",
     "ramda": "^0.26.1",
-    "react": "^16.6.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-scripts": "2.1.8",
     "react-app-polyfill": "^0.2.0",
-    "react-dom": "^16.6.3",
     "react-i18next": "^8.3.8",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1",
     "react-toastify": "^4.5.1",
     "react-virtualized": "^9.21.0",
     "redux": "^4.0.1",
@@ -52,17 +54,11 @@
   },
   "devDependencies": {
     "dotenv": "^6.2.0",
-    "eslint": "5.6.0",
+    "eslint": "5.12.0",
     "eslint-config-airbnb": "^17.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jsx-a11y": "^6.1.0",
-    "eslint-plugin-react": "^7.10.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4"
   },
   "eslintConfig": {
     "extends": "react-app"
