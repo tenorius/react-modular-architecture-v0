@@ -1,10 +1,10 @@
 {
   "name": "react-modular-boilerplate",
   "version": "0.1.0",
-  "author": "rodrigo.o.tenorio",
+  "author": "Rodrigo Tenório <email> (https://github.com/tenorius)",
   "contributors": [
     {
-      "name": "alyson.maia.queiroz"
+      "name": "Alyson Maia <alyson.maia@gmail.com> (https://github.com/FederalCircle)"
     }
   ],
   "scripts": {
