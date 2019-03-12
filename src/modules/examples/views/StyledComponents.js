@@ -17,11 +17,16 @@ Styled.Parent = styled.div`
   }
 `;
 
+Styled.Typography = styled(Typography)`
+  color: blue;
+`;
+
 window.foo = Styled;
 
 const StyledComponents = () => (
   <div>
-    <Typography variant="h3">Styled Components Example</Typography>
+    <Styled.Typography variant="h3">Styled Components Example</Styled.Typography>
+
     <Styled.Child>Child</Styled.Child>
     <Styled.Parent>
       <Styled.Child>Wrapped Child</Styled.Child>
