@@ -10,18 +10,18 @@ import Button from '@material-ui/core/Button';
 import { operations as usersOperations } from '../ducks/users';
 
 // Component
-class List extends React.Component {
+class API extends React.Component {
   handleClick = () => {
     this.props.actions.getAllUsers()
       .then(() => {
-        console.log('List.js');
+        console.log('API.js');
       });
   }
 
   render() {
     return (
       <React.Fragment>
-        <Typography variant="h3">Users List</Typography>
+        <Typography variant="h3">Users API</Typography>
         <Button
           className="button-red"
           variant="contained"
@@ -46,4 +46,4 @@ const mapDispatchToProps = dispatch => ({
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
   withI18n(),
-)(List);
+)(API);

@@ -19,7 +19,7 @@ Styled.Parent = styled.div`
 
 window.foo = Styled;
 
-const scExample = () => (
+const StyledComponents = () => (
   <div>
     <Typography variant="h3">Styled Components Example</Typography>
     <Styled.Child>Child</Styled.Child>
@@ -29,4 +29,4 @@ const scExample = () => (
   </div>
 );
 
-export default scExample;
+export default StyledComponents;
