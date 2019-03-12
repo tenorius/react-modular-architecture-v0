@@ -2,11 +2,14 @@ import React from 'react';
 import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
 import { withI18n } from 'react-i18next';
+// import styled from 'styled-components';
 
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 import { operations as usersOperations } from '../ducks/users';
 
+// Component
 class List extends React.Component {
   handleClick = () => {
     this.props.actions.getAllUsers()
@@ -17,10 +20,17 @@ class List extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Typography variant="h3">Users List</Typography>
-        <button onClick={this.handleClick}>Get all users</button>
-      </div>
+        <Button
+          className="button-red"
+          variant="contained"
+          color="primary"
+          onClick={this.handleClick}
+        >
+          Get all users
+        </Button>
+      </React.Fragment>
     );
   }
 }
