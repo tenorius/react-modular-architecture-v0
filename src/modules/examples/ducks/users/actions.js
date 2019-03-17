@@ -5,7 +5,7 @@
 import * as types from './types';
 
 // eslint-disable-next-line import/prefer-default-export
-export const getAllUsers = users => ({
-  type: types.GET_ALL_USERS,
+export const addUsers = users => ({
+  type: types.ADD_USERS,
   users,
 });

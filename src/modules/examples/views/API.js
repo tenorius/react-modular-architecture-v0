@@ -36,6 +36,7 @@ class API extends React.Component {
 }
 
 const mapStateToProps = state => ({
+  app: state.app,
   users: state.users,
 });
 

@@ -1,7 +1,11 @@
-import RootApi from './rootApi';
+import Api from './Api';
 
-const common = RootApi();
+export default class CommonService {
+  api = new Api();
 
-common.defaults.baseURL += '/posts';
+  basePath = '/posts';
 
-export default common;
+  async getAll() {
+    return this.api.get(this.basePath);
+  }
+}

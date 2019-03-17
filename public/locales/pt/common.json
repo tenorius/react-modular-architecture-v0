@@ -1,3 +1,7 @@
 {
-  "init": "common[pt] OK"
+  "_init": "common[pt]",
+  "introMessages": {
+    "title": "Olá, Mundo!",
+    "message": "Tudo está funcionando perfeitamente :)"
+  }
 }

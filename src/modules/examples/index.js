@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { withNamespaces } from 'react-i18next';
 
 import Routes from './Routes';
+import './ducks';
 
 const App = () => (
   <Fragment>

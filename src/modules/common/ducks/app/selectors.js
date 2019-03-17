@@ -7,6 +7,7 @@
  * based on that. They never introduce any changes to the application state.
  */
 
+// eslint-disable-next-line import/prefer-default-export
 export function fooBar(foo) {
   return foo === 'bar';
 }

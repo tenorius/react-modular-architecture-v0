@@ -4,4 +4,5 @@
  * https://medium.freecodecamp.org/scaling-your-redux-app-with-ducks-6115955638be
  */
 
-export { default as count } from './count';
+// eslint-disable-next-line import/prefer-default-export
+export { default as app } from './app';

@@ -8,4 +8,4 @@
 const createActionName = name => `examples/users/${name}`;
 
 // eslint-disable-next-line import/prefer-default-export
-export const GET_ALL_USERS = createActionName('GET_ALL_USERS');
+export const ADD_USERS = createActionName('ADD_USERS');

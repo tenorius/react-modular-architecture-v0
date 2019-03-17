@@ -12,14 +12,20 @@
  * thunk, it can dispatch many actions and chain them with promises.
  */
 
+import { normalizeUsers } from './utils';
 import * as actions from './actions';
-
-import userService from '../../services/userService';
+import * as commonActions from '../../../common/ducks/app/actions';
+import usersService from '../../services/usersService';
 // import logger from '../../../common/services/logger';
 
 // eslint-disable-next-line import/prefer-default-export
 export const getAllUsers = () => async (dispatch) => {
-  const { data: users } = await userService.get();
-
-  dispatch(actions.getAllUsers(users));
+  // Get users from api
+  const { data: rawUsers } = await usersService.getAll();
+  // Normalize data
+  const { entities, result: users } = normalizeUsers(rawUsers);
+  // Save the new entities and update the old ones
+  dispatch(commonActions.addEntities(entities));
+  // Save the new users
+  dispatch(actions.addUsers(users));
 };

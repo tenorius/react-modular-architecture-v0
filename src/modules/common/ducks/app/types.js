@@ -5,7 +5,9 @@
  * applications.
  */
 
-const createActionName = name => `common/count/${name}`;
+const createActionName = name => `common/app/${name}`;
 
+// eslint-disable-next-line import/prefer-default-export
+export const ADD_ENTITIES = createActionName('ADD_ENTITIES');
 export const COUNT_ADD = createActionName('COUNT_ADD');
 export const COUNT_SUB = createActionName('COUNT_SUB');

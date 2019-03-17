@@ -1,38 +1,16 @@
 import React from 'react';
-import { bindActionCreators, compose } from 'redux';
-import { connect } from 'react-redux';
 import { withI18n } from 'react-i18next';
 
-import { operations as countOperations } from '../ducks/count';
+import Typography from '@material-ui/core/Typography';
 
-class Home extends React.Component {
-  handleClick = (operation) => {
-    const actionName = operation === '+' ? 'countAdd' : 'countSub';
-    this.props.actions[actionName]();
-  }
+import LanguageChanger from '../components/LanguageChanger';
 
-  render() {
-    const { count, t } = this.props;
-    return (
-      <div>
-        <h1>{t('init')}</h1>
-        <span>{`Counter: ${count}`}</span>
-        <button type="button" onClick={() => this.handleClick('+')}>+</button>
-        <button type="button" onClick={() => this.handleClick('-')}>-</button>
-      </div>
-    );
-  }
-}
+const home = ({ t }) => (
+  <React.Fragment>
+    <Typography variant="title">{t('introMessages.title')}</Typography>
+    <Typography variant="subheading">{t('introMessages.message')}</Typography>
+    <LanguageChanger />
+  </React.Fragment>
+);
 
-const mapStateToProps = state => ({
-  count: state.count,
-});
-
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(countOperations, dispatch),
-});
-
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
-  withI18n(),
-)(Home);
+export default withI18n()(home);
