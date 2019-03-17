@@ -5,31 +5,46 @@ import { withI18n } from 'react-i18next';
 // import styled from 'styled-components';
 
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+
+import UsersList from '../components/UsersList';
 
 import { operations as usersOperations } from '../ducks/users';
 
 // Component
 class API extends React.Component {
+  state = {
+    loadingUsers: false,
+  }
+
   handleClick = () => {
-    this.props.actions.getAllUsers()
-      .then(() => {
-        console.log('API.js');
-      });
+    this.setState({ loadingUsers: true });
+    setTimeout(() => {
+      this.props.actions.getAllUsers()
+        .then(() => {
+          this.setState({ loadingUsers: false });
+        });
+    }, 3000);
+  }
+
+  getUsers = () => {
+    const { loadingUsers: loading } = this.state;
+    const { users } = this.props;
+    return !loading
+      ? users
+      : Array(9).fill(0).map((v, k) => k + 100);
   }
 
   render() {
+    const { t } = this.props;
     return (
       <React.Fragment>
-        <Typography variant="h3">Users API</Typography>
-        <Button
-          className="button-red"
-          variant="contained"
-          color="primary"
-          onClick={this.handleClick}
-        >
-          Get all users
-        </Button>
+        <Typography variant="h6">{t('apiPage.title')}</Typography>
+        <hr />
+        <UsersList
+          users={this.getUsers()}
+          loading={this.state.loadingUsers}
+          handleClick={this.handleClick}
+        />
       </React.Fragment>
     );
   }

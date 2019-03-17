@@ -15,9 +15,7 @@ import reducerRegistry from './modules/common/services/reducerRegistry';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
-const initialState = {
-  teste: true,
-};
+const initialState = { };
 
 const configureMiddleware = () => {
   const middlewares = [];
@@ -29,7 +27,7 @@ const configureMiddleware = () => {
   middlewares.push(thunk);
 
   // smart console logging of actions
-  middlewares.push(logger);
+  if (process.env.NODE_ENV !== 'production') middlewares.push(logger);
 
   // smart console logging of actions
   middlewares.push(reduxImmutableStateInvariant());

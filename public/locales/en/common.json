@@ -1,7 +1,9 @@
 {
   "_init": "common[pt]",
-  "introMessages": {
+  "homePage": {
     "title": "Hello World!",
-    "message": "Everything is working fine :)"
+    "message": "Everything is working fine :)",
+    "linkApi": "API example",
+    "linkStyledComponents": "Style example"
   }
 }

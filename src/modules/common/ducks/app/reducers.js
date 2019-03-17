@@ -9,7 +9,6 @@ const appEntitiesReducer = (state = {}, action) => {
     case types.ADD_ENTITIES:
       const newEntitiesNames = Object.keys(action.entities);
       const newState = { ...state };
-      console.log(newEntitiesNames);
       newEntitiesNames.forEach((name) => {
         newState[name] = {
           ...state[name],
