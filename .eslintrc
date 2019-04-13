@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "max-len": 0,
+    "linebreak-style": 0,
+    "no-underscore-dangle": 0,
+    "object-curly-newline": 0,
+    "no-case-declarations": 0,
+    "jsx-a11y/label-has-for": 0,
+    "react/prop-types": 0,
+    "react/destructuring-assignment": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}

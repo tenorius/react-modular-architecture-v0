@@ -1,0 +1,8 @@
+{
+  "_init": "common[pt]",
+  "apiPage": {
+    "title": "API call example",
+    "noUsers": "No users...",
+    "getUsers": "Get all users"
+  }
+}
